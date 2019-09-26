@@ -1,0 +1,17 @@
+{
+  "name": "El_pez_llamado_Wanda",
+  "version": "1.0.0",
+  "description": "Proyecto creado para la asignatura Implantación de aplicaciones web",
+  "author": "Paloma R. García Campón",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
