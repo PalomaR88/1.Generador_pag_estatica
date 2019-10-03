@@ -1,19 +1,19 @@
 ---
 title: "Creación de un sitio web estático"
 description: "Creación de una página web estática con Hugo"
-date: 2018-12-17T22:21:42+01:00
-publishDate: 2018-12-19T22:21:42+01:00
+date: 2019-10-03T22:21:42+01:00
+publishDate: 2019-10-03T22:21:42+01:00
 author: "Paloma R. García"
 images: []
 draft: false
 tags: ["aplicaciones_web", "ASIR" , "Hugo"]
 ---
 
-Selecciona una combinación entre generador de páginas estáticas y servicio donde desplegar la página web. Escribe tu propuesta en redmine, cada propuesta debe ser original.
+- Selecciona una combinación entre generador de páginas estáticas y servicio donde desplegar la página web. Escribe tu propuesta en redmine, cada propuesta debe ser original.
 
 Surge - Hugo
 
-Comenta la instalación del generador de página estática. Recuerda que el generador tienes que instalarlo en tu entorno de desarrollo. Indica el lenguaje en el que está desarrollado y el sistema de plantillas que utiliza. (1 punto)
+- Comenta la instalación del generador de página estática. Recuerda que el generador tienes que instalarlo en tu entorno de desarrollo. Indica el lenguaje en el que está desarrollado y el sistema de plantillas que utiliza. (1 punto)
 
 HUGO: Lenguaje: JavaScript. Sistema de plantillas: React.
 
@@ -57,7 +57,7 @@ $ echo 'theme = "ananke"' >> config.toml
 
 
 
-    3. Configura el generador para cambiar el nombre de tu página, el tema o estilo de la página,… Indica cualquier otro cambio de configuración que hayas realizado. (1 punto)
+- Configura el generador para cambiar el nombre de tu página, el tema o estilo de la página,… Indica cualquier otro cambio de configuración que hayas realizado. (1 punto)
 
 Modifico el fichero quickstart/content/posts/my-first-post.md para añadir nuevos post. 
 
@@ -87,12 +87,5 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ~~~
 
-Genera un sitio web estático con al menos 3 páginas. Deben estar escritas en Markdown y deben tener los siguientes elementos HTML: títulos, listas, párrafos, enlaces e imágenes. El código que estas desarrollando, configuración del generado, páginas en markdown,… debe estar en un repositorio Git (no es necesario que el código generado se guarde en el repositorio, evitalo usando el fichero .gitignore). (3 puntos)
-
-
-
-Explica el proceso de despliegue utilizado por el servicio de hosting que vas a utilizar. (2 puntos)
-
-Piensa algún método (script, scp, rsync, git,…) que te permita automatizar la generación de la página (integración continua) y el despliegue automático de la página en el entorno de producción, después de realizar un cambio de la página en el entorno de desarrollo. Muestra al profesor un ejemplo de como al modificar la página se realiza la puesta en producción de forma automática. (3 puntos)
 
 

@@ -7,5 +7,5 @@ menu: main
 weight: 1
 ---
 
-# Un pez llamado Wanda
+# El pez llamado Wanda
 ## Blog sobre administración de sistemas informáticos en red
