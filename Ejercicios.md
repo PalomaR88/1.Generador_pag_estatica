@@ -77,6 +77,25 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ~~~
 
+Para modificar el tema de la página estática nos hemos descargado un repositorio de gitHub con un tema cuyo formato es agradable. Reemplazamos los ficheros que contiene quickstart por los del repositorio y modificamos el fichero config.toml con nuestros parámetros:
+
+~~~
+baseURL = "/"
+title = "Un pez llamado Wanda"
+author = "Paloma R. García Campón"
+googleAnalytics = ""
+defaultContentLanguage = "en"
+language = "en-US"
+paginate = 3
+
+theme = "hugo-terrassa-theme"
+...
+~~~
+
+Los fichero .md que queremos añadir a la página los guardamos en el fichero /quistart/content. En nuestro caso los añadimos en el directorio /post.
+
+
+
     4. Genera un sitio web estático con al menos 3 páginas. Deben estar escritas en Markdown y deben tener los siguientes elementos HTML: títulos, listas, párrafos, enlaces e imágenes. El código que estas desarrollando, configuración del generado, páginas en markdown,… debe estar en un repositorio Git (no es necesario que el código generado se guarde en el repositorio, evitalo usando el fichero .gitignore). (3 puntos)
 
 
