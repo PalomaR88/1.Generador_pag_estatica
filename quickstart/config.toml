@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 language = "en-US"
 paginate = 3
 
-theme = "hugo-terrassa-theme"
+theme = "terrassa"
 
 [params]
     description = "Proyecto creado para la asignatura Implantación de Aplicaciones Web en el curso Administración de Sistemas Informaticos en Red"

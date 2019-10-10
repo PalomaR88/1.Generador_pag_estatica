@@ -101,6 +101,24 @@ Los fichero .md que queremos añadir a la página los guardamos en el fichero /q
 
 
     5. Explica el proceso de despliegue utilizado por el servicio de hosting que vas a utilizar. (2 puntos)
+
+En primer lugar hay que instalar surge:
+~~~
+$ sudo npm install --global surge
+npm WARN npm npm does not support Node.js v10.15.2
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+/usr/local/bin/surge -> /usr/local/lib/node_modules/surge/lib/cli.js
++ surge@0.21.3
+added 137 packages from 113 contributors in 22.737s
+
+~~~
+
+
+
+
     6. Piensa algún método (script, scp, rsync, git,…) que te permita automatizar la generación de la página (integración continua) y el despliegue automático de la página en el entorno de producción, después de realizar un cambio de la página en el entorno de desarrollo. Muestra al profesor un ejemplo de como al modificar la página se realiza la puesta en producción de forma automática. (3 puntos)
 
 
