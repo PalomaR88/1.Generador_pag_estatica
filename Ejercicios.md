@@ -89,8 +89,11 @@ Los fichero .md que queremos añadir a la página los guardamos en el fichero /q
 
 **4. Genera un sitio web estático con al menos 3 páginas. Deben estar escritas en Markdown y deben tener los siguientes elementos HTML: títulos, listas, párrafos, enlaces e imágenes. El código que estas desarrollando, configuración del generado, páginas en markdown,… debe estar en un repositorio Git (no es necesario que el código generado se guarde en el repositorio, evitalo usando el fichero .gitignore).**
 
-[El_pez_llamado_Wanda]( https://github.com/PalomaR88/El_pez_llamado_Wanda "El pez llamado Wanda")
+[El_pez_llamado_Wanda(GitHub)]( https://github.com/PalomaR88/El_pez_llamado_Wanda "El pez llamado Wanda(GitHub)")
 
+
+
+[El_pez_llamado_Wanda]( http://el_pez_llamado_wanda.surge.sh/ "El pez llamado Wanda")
 
 **5. Explica el proceso de despliegue utilizado por el servicio de hosting que vas a utilizar.**
 
