@@ -1,9 +1,10 @@
 
-    1. Selecciona una combinación entre generador de páginas estáticas y servicio donde desplegar la página web. Escribe tu propuesta en redmine, cada propuesta debe ser original.
-
+**1. Selecciona una combinación entre generador de páginas estáticas y servicio donde desplegar la página web. Escribe tu propuesta en redmine, cada propuesta debe ser original.**
+~~~
 Surge - Hugo
+~~~
 
-    2. Comenta la instalación del generador de página estática. Recuerda que el generador tienes que instalarlo en tu entorno de desarrollo. Indica el lenguaje en el que está desarrollado y el sistema de plantillas que utiliza. (1 punto)
+**2. Comenta la instalación del generador de página estática. Recuerda que el generador tienes que instalarlo en tu entorno de desarrollo. Indica el lenguaje en el que está desarrollado y el sistema de plantillas que utiliza.**
 
 HUGO: Lenguaje: Go. Sistema de plantillas: Go.
 
@@ -47,38 +48,29 @@ $ echo 'theme = "ananke"' >> config.toml
 
 
 
-    3. Configura el generador para cambiar el nombre de tu página, el tema o estilo de la página,… Indica cualquier otro cambio de configuración que hayas realizado. (1 punto)
+**3. Configura el generador para cambiar el nombre de tu página, el tema o estilo de la página,… Indica cualquier otro cambio de configuración que hayas realizado.**
 
 Modifico el fichero quickstart/content/posts/my-first-post.md para añadir nuevos post. 
 
 Para cambiar el nombre de la página ha que modificar el fichero config.toml.
-
 ~~~
-$ hugo server -D
+$ hugo
 
                    | EN  
 +------------------+----+
-  Pages            | 10  
-  Paginator pages  |  0  
+  Pages            | 38  
+  Paginator pages  |  6  
   Non-page files   |  0  
   Static files     |  3  
   Processed images |  0  
-  Aliases          |  1  
+  Aliases          |  6  
   Sitemaps         |  1  
   Cleaned          |  0  
 
-Total in 31 ms
-Watching for changes in /home/paloma/DISCO2/CICLO II/IMPLANTACIÓN DE APLICACIONES WEB/1.Generador_pag_estatica/quickstart/{content,data,layouts,static,themes}
-Watching for config changes in /home/paloma/DISCO2/CICLO II/IMPLANTACIÓN DE APLICACIONES WEB/1.Generador_pag_estatica/quickstart/config.toml
-Environment: "development"
-Serving pages from memory
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
+Total in 82 ms
 ~~~
 
 Para modificar el tema de la página estática nos hemos descargado un repositorio de gitHub con un tema cuyo formato es agradable. Reemplazamos los ficheros que contiene quickstart por los del repositorio y modificamos el fichero config.toml con nuestros parámetros:
-
 ~~~
 baseURL = "/"
 title = "Un pez llamado Wanda"
@@ -95,12 +87,12 @@ theme = "hugo-terrassa-theme"
 Los fichero .md que queremos añadir a la página los guardamos en el fichero /quistart/content. En nuestro caso los añadimos en el directorio /post.
 
 
+**4. Genera un sitio web estático con al menos 3 páginas. Deben estar escritas en Markdown y deben tener los siguientes elementos HTML: títulos, listas, párrafos, enlaces e imágenes. El código que estas desarrollando, configuración del generado, páginas en markdown,… debe estar en un repositorio Git (no es necesario que el código generado se guarde en el repositorio, evitalo usando el fichero .gitignore).**
 
-    4. Genera un sitio web estático con al menos 3 páginas. Deben estar escritas en Markdown y deben tener los siguientes elementos HTML: títulos, listas, párrafos, enlaces e imágenes. El código que estas desarrollando, configuración del generado, páginas en markdown,… debe estar en un repositorio Git (no es necesario que el código generado se guarde en el repositorio, evitalo usando el fichero .gitignore). (3 puntos)
+[El_pez_llamado_Wanda]( https://github.com/PalomaR88/El_pez_llamado_Wanda "El pez llamado Wanda")
 
 
-
-    5. Explica el proceso de despliegue utilizado por el servicio de hosting que vas a utilizar. (2 puntos)
+**5. Explica el proceso de despliegue utilizado por el servicio de hosting que vas a utilizar.**
 
 En primer lugar hay que instalar surge:
 ~~~
@@ -113,12 +105,25 @@ npm WARN npm You can find the latest version at https://nodejs.org/
 /usr/local/bin/surge -> /usr/local/lib/node_modules/surge/lib/cli.js
 + surge@0.21.3
 added 137 packages from 113 contributors in 22.737s
-
 ~~~
 
 
+**6. Piensa algún método (script, scp, rsync, git,…) que te permita automatizar la generación de la página (integración continua) y el despliegue automático de la página en el entorno de producción, después de realizar un cambio de la página en el entorno de desarrollo. Muestra al profesor un ejemplo de como al modificar la página se realiza la puesta en producción de forma automática.**
+~~~
+#! bin/sh
 
+commit=$(git commit -am 'nuevo' | egrep 'content/')
+touch ../nuevo.txt
+echo $commit > ../nuevo.txt
 
-    6. Piensa algún método (script, scp, rsync, git,…) que te permita automatizar la generación de la página (integración continua) y el despliegue automático de la página en el entorno de producción, después de realizar un cambio de la página en el entorno de desarrollo. Muestra al profesor un ejemplo de como al modificar la página se realiza la puesta en producción de forma automática. (3 puntos)
+git add $(cat ../nuevo.txt)
+git commit -m 'añado'
+git push
+
+rm ../nuevo.txt
+
+hugo
+surge public/ el_pez_llamado_wanda.surge.sh
+~~~
 
 
